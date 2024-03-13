@@ -1,0 +1,162 @@
+﻿<Window x:Class="Raiin_Patcher.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Raiin_Patcher"
+        mc:Ignorable="d"
+        Title="TMP Patcher" Height="641" Width="1021" AllowsTransparency="False" WindowStyle="None" WindowStartupLocation="CenterScreen" Background="Transparent" ResizeMode="NoResize" Icon="Resources\icon.ico" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+    <Grid x:Name="Grid">
+
+        <Image x:Name="img_bg"  Source="/IMG/Launcher3.png" MouseLeftButtonDown="img_bg_MouseLeftButtonDown" Height="641" VerticalAlignment="Center" Margin="0,0,1,0" HorizontalAlignment="Right" Width="1021"/>
+
+        <Image x:Name="img_pb_full" HorizontalAlignment="Left" Height="11" Width="636" VerticalAlignment="Top" Source="/IMG/loader-file-fill.png" Stretch="None" Margin="30,596,0,0" RenderTransformOrigin="0.562,0.562"/>
+
+        <TextBlock x:Name="tb_pb_speed" Foreground="white" Text="" Margin="151,575,417,66" FontSize="12" TextAlignment="Left" IsHitTestVisible="False"/>
+        <TextBlock x:Name="tb_pb_full" Foreground="white" Text="" Margin="27,559,804,56" FontSize="12" TextAlignment="Center" IsHitTestVisible="False"/>
+
+        <Image x:Name="btn_start" Height="95" Margin="757,542,44,0" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="btn_start_MouseLeftButtonDown" Source="/IMG/Start-btn.png">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_config" HorizontalAlignment="Left" Height="27" Width="20" Margin="909,6,0,0" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="btn_config_MouseLeftButtonDown" Source="/IMG/Settings.png">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_minimize" HorizontalAlignment="Left" Height="25" Width="19" Margin="948,15,0,0" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="btn_minimize_MouseLeftButtonDown" Source="/IMG/Minimize.png">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_quit" HorizontalAlignment="Left" Height="22" Width="17" Margin="986,9,0,0" VerticalAlignment="Top" Cursor="Hand" MouseLeftButtonDown="btn_quit_MouseLeftButtonDown" Source="/IMG/Close.png" RenderTransformOrigin="1.19,0.539">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.038"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_facebook" HorizontalAlignment="Left" Height="36" Margin="919,48,0,0" VerticalAlignment="Top" Width="27" Cursor="Hand" MouseLeftButtonDown="btn_openfacebook_MouseLeftButtonDown" Source="/IMG/11-115962_facebook-logo-png-transparent-background-facebook-png.png">
+            <Image.Style>
+                <Style>
+
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_discord" HorizontalAlignment="Left" Height="29" Margin="964,50,0,0" VerticalAlignment="Top" Width="26" Cursor="Hand" MouseLeftButtonDown="btn_opendiscord_MouseLeftButtonDown" Source="/IMG/Discord-Logo.png" RenderTransformOrigin="0.481,0.482">
+            <Image.Style>
+                <Style>
+
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_facebook_Kopiuj" HorizontalAlignment="Left" Height="43" Margin="27,55,0,0" VerticalAlignment="Top" Width="61" Cursor="Hand" MouseLeftButtonDown="btn_website_MouseLeftButtonDown" Source="/IMG/WEBSITE_.png">
+            <Image.Style>
+                <Style>
+
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_facebook_Kopiuj1" HorizontalAlignment="Left" Height="54" Margin="112,55,0,0" VerticalAlignment="Top" Width="54" Cursor="Hand" MouseLeftButtonDown="btn_forum_MouseLeftButtonDown" Source="/IMG/FORUM.png">
+            <Image.Style>
+                <Style>
+
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <Image x:Name="btn_facebook_Kopiuj2" HorizontalAlignment="Left" Height="60" Margin="187,55,0,0" VerticalAlignment="Top" Width="67" Cursor="Hand" MouseLeftButtonDown="btn_comunnity_MouseLeftButtonDown" Source="/IMG/SUPPORT.png">
+            <Image.Style>
+                <Style>
+
+                    <Style.Triggers>
+                        <Trigger Property="UIElement.IsMouseOver" Value="True">
+                            <Setter Property="UIElement.Opacity" Value=".8" />
+                        </Trigger>
+                        <Trigger Property="UIElement.IsEnabled" Value="False">
+                            <Setter Property="UIElement.Opacity" Value=".5" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        <WebBrowser Margin="10,320,694,99" Source="http://tmppatcher.online/1.html"/>
+        <WebBrowser Margin="352,320,352,99" Source="http://tmppatcher.online/2.html"/>
+        <WebBrowser Margin="694,320,10,99" Source="http://tmppatcher.online/3.html"/>
+        <Image x:Name="img_pb_full_Kopiuj" HorizontalAlignment="Left" Height="18" Width="665" VerticalAlignment="Top" Source="/IMG/Current File2.png" Stretch="None" Margin="27,593,0,0" RenderTransformOrigin="0.562,0.562"/>
+    </Grid>
+</Window>
