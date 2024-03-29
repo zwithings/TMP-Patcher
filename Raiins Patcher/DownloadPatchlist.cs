@@ -10,7 +10,7 @@ namespace Raiin_Patcher
     {
         public static void WC_DownloadPatchlist()
         {
-            DeveloperConsole.Write.Download("Download atual: Patchlist.raiin");
+            DeveloperConsole.Write.Download("Download actual: Patchlist.raiin");
             Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.btn_start.IsEnabled = false; }));
             WebClient WC_NewDownload = new WebClient();
             WC_NewDownload.DownloadProgressChanged += WC_NewDownload_DownloadProgressChanged;
@@ -26,7 +26,7 @@ namespace Raiin_Patcher
 
         private static void WC_NewDownload_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
-            DeveloperConsole.Write.Download("Download terminado: Patchlist.raiin");
+            DeveloperConsole.Write.Download("Download: Patchlist.raiin");
             MainWindow.BytesHave = 0;
             MainWindow.BytesNeed = 0;
             MainWindow.FilesHave = 0;
@@ -59,7 +59,7 @@ namespace Raiin_Patcher
                 File.Delete(Functions.GetCurrentFolder() + "Patchlist.raiin");
 
                 DeveloperConsole.Write.Log("Client will updated...");
-                Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "O cliente está atualmente a ser modificado! Tenta novamente dentro de 5 minutos."; }));
+                Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "The client is currently being modified! Try again in 5 minutes."; }));
             }
 
         }

@@ -18,7 +18,7 @@ namespace Raiin_Patcher
             {
                 Directory.CreateDirectory(Functions.GetFolder(Functions.GetCurrentFolder() + Functions.GetName(MainWindow.Patchlist[MainWindow.FilesHave])));
             }
-            DeveloperConsole.Write.Download("Download atual: " + Functions.GetName(MainWindow.Patchlist[MainWindow.FilesHave]));
+            DeveloperConsole.Write.Download("Download actual: " + Functions.GetName(MainWindow.Patchlist[MainWindow.FilesHave]));
             WebClient WC_NewDownload = new WebClient();
             WC_NewDownload.DownloadProgressChanged += WC_NewDownload_DownloadProgressChanged;
             WC_NewDownload.DownloadFileCompleted += WC_NewDownload_DownloadFileCompleted;
@@ -54,15 +54,15 @@ namespace Raiin_Patcher
 
         private static void WC_NewDownload_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
-            DeveloperConsole.Write.Download("Download terminado: " + Functions.GetName(MainWindow.Patchlist[MainWindow.FilesHave]));
+            DeveloperConsole.Write.Download("Download: " + Functions.GetName(MainWindow.Patchlist[MainWindow.FilesHave]));
             MainWindow.BytesHave += Functions.GetSize(MainWindow.Patchlist[MainWindow.FilesHave]);
             MainWindow.FilesHave += 1;
             if (MainWindow.FilesHave == MainWindow.FilesNeed)
             {
                 Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.btn_start.IsEnabled = true; }));
                 Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.img_pb_full.Width = dPWidth; }));
-                Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "Terminado"; }));
-                DeveloperConsole.Write.Log("Todos os ficheiros foram atualizados com sucesso: " + MainWindow.FilesHave + "/" + MainWindow.FilesNeed);
+                Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "Finished"; }));
+                DeveloperConsole.Write.Log("All files have been successfully updated: " + MainWindow.FilesHave + "/" + MainWindow.FilesNeed);
                 Start.Start_EXE();
             }
             else

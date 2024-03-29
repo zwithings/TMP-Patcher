@@ -25,7 +25,7 @@ namespace Raiin_Patcher
             }
             else
             {
-                MessageBox.Show(Config.Patcher.Names.Start + " não foi encontrado", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Config.Patcher.Names.Start + " not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -40,7 +40,7 @@ namespace Raiin_Patcher
             }
             else
             {
-                MessageBox.Show(Config.Patcher.Names.Config + " não foi encontrado", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(Config.Patcher.Names.Config + " not found", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

@@ -68,7 +68,7 @@ namespace Raiin_Patcher
                 var parts = Line.Split('|');
                 if (parts.Length < 3)
                 {
-                    MessageBox.Show("Nieprawidłowy format linii: " + Line, "GetSize Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Nieprawidlowy format linii: " + Line, "GetSize Error", MessageBoxButton.OK, MessageBoxImage.Error);
                     Environment.Exit(0);
                 }
                 return long.Parse(parts[2]);
@@ -178,7 +178,7 @@ namespace Raiin_Patcher
                     Application.Current.Dispatcher.Invoke(new Action(() => {
                         MainWindow.WPF.IsEnabled = true;
                         Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.img_pb_full.Width = DownloadFiles.dPWidth; }));
-                        Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "Terminado"; }));
+                        Application.Current.Dispatcher.Invoke(new Action(() => { MainWindow.WPF.tb_pb_speed.Text = "Finished"; }));
                     }));
                 }
                 return Result;
