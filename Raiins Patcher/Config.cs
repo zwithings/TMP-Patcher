@@ -14,7 +14,7 @@ namespace Raiin_Patcher
             internal class Settings
             {
                 public static string ServerUrl = "https://tmpmt2.com/main/news";
-                public static string ServerUrlWiki = "https://auror2.com.br/wiki/";
+                public static string ServerUrlWiki = "";
                 public static string ServerUrlSupport = "https://tmpmt2.com/auth/register";
                 public static string ServerUrlFacebook = "https://www.facebook.com/TMPMT2/";
                 public static string ServerUrlDiscord = "https://discord.gg/AjbxmedDXZ";
