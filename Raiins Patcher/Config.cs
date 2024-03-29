@@ -26,7 +26,7 @@ namespace Raiin_Patcher
 
             public static class Names
             {
-                public static string Start = "Metin2Distribute.exe";
+                public static string Start = "TMP_GAME.exe";
                 public static string Config = "config.exe";
 
             }
