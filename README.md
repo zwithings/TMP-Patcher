@@ -1,3 +1,7 @@
 Source code for the TMPMT2.com server patcher
 
-https://www.virustotal.com/gui/file/fdbe200053c9abcc0d4ec80de1c97dd9e92b5afc647db4dfa364188704a3b271/detection
+[Virustotal](https://www.virustotal.com/gui/file/85581a4ea5214e5b378cbaf3309ca9f1fa4b672b9e4b94ee5d5ccd5bd460d8ae)
+
+[Download](https://patch.tmp.international/)
+
+
